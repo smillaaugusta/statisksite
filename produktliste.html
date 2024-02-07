@@ -27,21 +27,27 @@
     </header>
 
     <h1>Produktliste</h1>
-    <main></main>
+    <main>
 
-    <template id="smallProductTemplate">
-        <article class="small_product_onSale">
-            <a href="produkt.html"><img src="https://kea-alt-del.dk/t7/images/webp/1000/1525.webp" alt="Taske"></a>
-            <h2>Deck Navy Blue Backpack</h2>
-            <p class="subtle">Backpack Puma</p>
-            <p class="price">Price: 1.299,-</p>
-            <p class="season">Season: Fall</p>
-            <p class="onDiscount">50%</p>
-            <a class="read" href="produkt.html">Read more</a>
-        </article>
-    </template>
-    <div class="product_list">
-        <!-- <article class="small_product_onSale">
+        <template id="smallProductTemplate">
+            <article class="smallProduct">
+                <a href="produkt.html"><img src="https://kea-alt-del.dk/t7/images/webp/1000/1525.webp"
+                        alt="Deck Navy Blue Backpack"></a>
+                <h2>Deck Navy Blue Backpack</h2>
+                <p class="subtle">Backpack Puma</p>
+                <p class="price"><span>Prev.</span>DKK 1.299,-</p>
+                <p class="season">Season: Fall</p>
+                <div class="dicounted">
+                    <p>Now DKK 1.000,-</p>
+                    <p class="onDiscount">-50%</p>
+                </div>
+                <a class="read-more" href="produkt.html">Read more</a>
+            </article>
+        </template>
+
+    </main>
+    <!-- <div class="product_list"> -->
+    <!-- <article class="small_product_onSale">
             <a href="produkt.html"><img src="https://kea-alt-del.dk/t7/images/webp/1000/1525.webp" alt="Taske"></a>
             <p>Deck Navy Blue Backpack</p>
             <p>1.299,00 kr.</p>
