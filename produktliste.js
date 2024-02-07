@@ -1,4 +1,8 @@
-fetch("https://kea-alt-del.dk/t7/api/products?limit=10")
+const urlParams = new URLSearchParams(window.location.search);
+
+const category = urlParams.get("category");
+
+fetch("https://kea-alt-del.dk/t7/api/products?category=" + category)
   .then((res) => res.json())
   .then(showProducts);
 
