@@ -8,16 +8,12 @@ function showCategories(cats) {
 
 function showCategory(cat) {
   //fanger vores template
-
   const template = document.querySelector("template").content;
-
   //cloner
   const clone = template.cloneNode(true);
-
   //ændrer indhold
   clone.querySelector("a").textContent = cat.category;
-  clone.querySelector("a").href = "produktliste.html?category= ${cat.category}";
-
+  clone.querySelector("a").href = `produktliste.html?category= ${cat.category}`;
   //appender
   document.querySelector(".letterGroup ol").appendChild(clone);
 }
