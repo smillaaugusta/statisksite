@@ -5,14 +5,14 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="general.css">
-    <title>Document</title>
+    <title>Produktliste</title>
 </head>
 
 <body>
 
     <header class="menu">
         <div>
-            <h2 class="logo">Hej</h2>
+            <h2 class="logo">Fashion R Us</h2>
         </div>
         <div>
             <nav class="navbar">
@@ -25,20 +25,22 @@
 
     </header>
 
-    <h1>Produktliste</h1>
     <main>
+        <h1 class="product_h1">Produktliste</h1>
+
         <div class="product_list"></div>
 
         <template id="smallProductTemplate">
+
             <article class="smallProduct">
                 <a href="produkt.html"><img src="https://kea-alt-del.dk/t7/images/webp/1000/1525.webp"
                         alt="Deck Navy Blue Backpack"></a>
+                <div class="sold-out-banner">Udsolgt</div>
                 <h2>Deck Navy Blue Backpack</h2>
                 <p class="subtle">Backpack Puma</p>
                 <p class="price"><span>Prev.</span>DKK 1.299,-</p>
                 <p class="season">Season: Fall</p>
                 <div class="dicounted">
-                    <p>Now DKK 1.000,-</p>
                     <p class="onDiscount">-50%</p>
                 </div>
                 <a class="read-more" href="produkt.html">Read more</a>

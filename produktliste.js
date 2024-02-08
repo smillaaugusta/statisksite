@@ -2,7 +2,7 @@ const urlParams = new URLSearchParams(window.location.search);
 
 const category = urlParams.get("category");
 
-fetch("https://kea-alt-del.dk/t7/api/products?limit=100&category=" + category)
+fetch("https://kea-alt-del.dk/t7/api/products?limit=10&category=" + category)
   .then((res) => res.json())
   .then(showProducts);
 
@@ -12,7 +12,7 @@ function showProducts(products) {
 }
 
 function showProduct(product) {
-  //  console.log(product);
+  console.log(product);
 
   //fange template
   const template = document.querySelector("#smallProductTemplate").content;
@@ -42,6 +42,10 @@ function showProduct(product) {
     copy.querySelector(".onDiscount").textContent = product.discount + "%";
   } else {
     copy.querySelector(".onDiscount").remove();
+  }
+
+  if (product.soldout == 0) {
+    copy.querySelector(".sold-out-banner").remove();
   }
 
   copy.querySelector(".read-more").href = "produkt.html?id=" + product.id;

@@ -4,6 +4,84 @@
   box-sizing: border-box;
 }
 
+.product {
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: auto;
+  gap: 10px;
+  padding: 10px;
+}
+
+ol {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 50px;
+  list-style: none;
+  background-color: rgb(60, 60, 60);
+  font-family: sans-serif;
+  font-size: 1.5rem;
+  padding: 40px;
+  text-transform: uppercase;
+  border-radius: 10px;
+}
+
+.product img {
+  max-width: 100%;
+}
+
+.sold-out-banner {
+  position: relative;
+  bottom: 0; /* Placerer banneret i bunden af billedet */
+  left: 0;
+  width: 100%; /* Sikrer, at banneret er lige så bredt som billedet */
+  background-color: red;
+  color: white;
+  padding: 5px 10px;
+  font-weight: bold;
+  text-align: center; /* Centrerer teksten */
+  border-radius: 5px;
+}
+
+.read-more {
+  text-decoration: none;
+  color: blue;
+}
+
+ol a {
+  color: whitesmoke;
+}
+
+.letterGroup h1,
+.product_h1 {
+  text-transform: uppercase;
+  font-size: 2rem;
+  padding: 20px;
+}
+
+.sold-out-banner {
+  top: 0;
+  left: 0;
+  background-color: red;
+  color: white;
+  padding: 5px 10px;
+  font-weight: bold;
+  z-index: 1; /* Sørg for at banneret ligger øverst */
+}
+
+.product img {
+  max-width: 100%;
+}
+
+.read-more {
+  text-decoration: none;
+  color: blue;
+}
+
+/* Juster størrelsen på banneret efter tekstlængden */
+.sold-out-banner {
+  font-size: 12px; /* Juster størrelsen efter behov */
+}
+
 img {
   width: 100%;
   height: auto;
@@ -30,7 +108,7 @@ p {
 .product_list {
   display: grid;
   grid-template-columns: 1fr 1fr;
-  gap: 6%;
+  gap: 2%;
 }
 
 .product img {
@@ -124,7 +202,8 @@ h2 {
 
   .product_list {
     display: grid;
-    grid-template-columns: repeat(5, 1fr);
+    grid-template-columns: repeat(4, 1fr);
+    padding: 25px;
   }
 
   .product img {
@@ -140,9 +219,5 @@ h2 {
 
   .spec {
     text-align: left;
-  }
-
-  .kate:hover {
-    transform: scale(1.02);
   }
 }
